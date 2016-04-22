@@ -1,4 +1,4 @@
-import {KpIndexToGeomagnaticLat,GeomagnaticLatToKPIndex}  from "./../src/lib"
+import {KpIndexToGeomagneticLat,GeomagneticLatToKPIndex}  from "./../src/lib"
 import {expect} from "chai"
 
 /**
@@ -58,7 +58,7 @@ describe("GeomagnaticToKpIndex-Converter", function() {
 
     testValues.forEach((testValue)=>{
         it("should return the geoMagLat: " + testValue.geomagneticLat + " for the kpIndex:" + testValue.kpValue, ()=>{
-            let result = KpIndexToGeomagnaticLat(testValue.kpValue)
+            let result = KpIndexToGeomagneticLat(testValue.kpValue)
 
             expect(Math.round(result * 10)/10).to.equal(testValue.geomagneticLat);
         })
@@ -69,7 +69,7 @@ describe("GeomagnaticToKpIndex-Converter", function() {
   describe("GeomagnaticPosToKPIndex", function() {
       testValues.forEach((testValue)=>{
         it("should return the kpIndex: " + testValue.kpValue + " for the geMagPost:" + testValue.geomagneticLat, ()=>{
-            let result = GeomagnaticLatToKPIndex(testValue.geomagneticLat)
+            let result = GeomagneticLatToKPIndex(testValue.geomagneticLat)
             expect(Math.round(result)).to.equal(testValue.kpValue);
         })
     })

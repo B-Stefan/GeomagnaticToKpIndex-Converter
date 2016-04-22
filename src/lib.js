@@ -8,7 +8,7 @@ const GOEMAG_LAT_MAX = 66.5
 //Under this threshold value the kPValue don't change
 const GOEMAG_LAT_MIN = 48.1
 
-export function KpIndexToGeomagnaticLat(kpIndex){
+export function KpIndexToGeomagneticLat(kpIndex){
   //If above the 0 line
   if(kpIndex==KP_INDEX_MIN){
     return GOEMAG_LAT_MAX;
@@ -21,7 +21,7 @@ export function KpIndexToGeomagnaticLat(kpIndex){
 
 }
 
-export function GeomagnaticLatToKPIndex(geomagnaticLat){
+export function GeomagneticLatToKPIndex(geomagnaticLat){
   //If above the 0 line
   if(geomagnaticLat>GOEMAG_LAT_MAX){
     return KP_INDEX_MIN;
@@ -34,3 +34,5 @@ export function GeomagnaticLatToKPIndex(geomagnaticLat){
   return (geomagnaticLat - 68.567) / -2.0485 -1 ;
 
 }
+
+export function KPIndexToGeoMagneticStorm
