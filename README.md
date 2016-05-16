@@ -9,7 +9,7 @@ For more information visit [spaceweatherlive.com](https://www.spaceweatherlive.c
 
 #Example
 
-This module is written in ES6 you have to compile (https://babeljs.io/it) if you want to use this with ES5
+This module is written in ES6 you find the compiled version in *dist/lib.js* 
 
 ```javascript
 

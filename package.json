@@ -1,12 +1,12 @@
 {
   "name": "geomagnatic-to-kp-index-converter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Converts a kpIndex to a geomagnatic pos and the other way arround",
-  "main": "src/lib.js",
+  "main": "dist/lib.js",
   "scripts": {
-    "start": "",
-    "test": "./node_modules/.bin/mocha --require babel-core/register "
-    "dist"
+    "dist": "./node_modules/.bin/babel src --out-dir dist   --presets es2015",
+    "prepublish": "npm run dist",
+    "test": "./node_modules/.bin/mocha --require babel-core/register"
   },
   "repository": {
     "type": "git",
